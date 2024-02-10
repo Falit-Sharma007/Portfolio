@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falit - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(14, 13, 13);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around; 
+            align-items: center;
+           /* height: 80px; */
+            background-color: rgb(26, 26, 34);
+            padding: 20px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center; 
+        } 
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(143, 143, 212);
+            font-size: 1.02rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+           /* padding-left: 40px; */
+        }
+
+        .left img{
+            width: 10%;
+        }
+
+       /* .right ul{
+            padding-left: 300px;
+        } */
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 2rem;
+        }
+
+        .rightSection img {
+            width: 80%;
+            margin: 40px 0;
+
+        }
+
+        .purple {
+            color: red;
+        }
+
+        #element {
+            color: red;
+        } 
+
+        .burger{
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            right: 5%;
+            top: 15px; 
+        }
+
+        .burger:hover{
+            color: red;
+            transform: scale3d();
+        }
+
+        .line{
+            width: 33px;
+            background-color: white;
+            height: 4px;
+            margin: 3px 3px;
+        } 
+
+
+        /* For Animation */
+   
+        .rightSection {
+            animation: 2s anim-lineUp ease-out;
+        }
+
+        @keyframes anim-lineUp {
+            0% {
+                opacity: 0;
+                transform: translateY(80%);
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+
+        @media only screen and (max-width: 800px) {
+            nav {
+                flex-direction: column;
+                padding: 2% 0;
+            }
+
+            .firstSection {
+                flex-direction: column;
+            }
+
+            section .leftSection {
+                width: fit-content;
+                text-align: center;
+            }
+
+            section .rightSection {
+                width: fit-content;
+                text-align: center;
+            }
+           /* .left{
+                text-align: center; 
+            } */
+            nav ul{
+                margin: 2% 0;
+                flex-direction: column;
+                align-items: center;
+            }
+            .right{
+                text-align: center;
+                margin-top: 10px;
+                transition: all 0.7s ease-out;
+                height: 447px;
+            } 
+            .right ul li{
+                padding: 30px;
+            }
+            .burger{
+                display: block;
+            }
+            .h-nav-resp{
+                height: 50px;
+            }
+            .v-class-resp{
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Falit's Portfolio.<img src="pi.jpg"></div>
+            <div class="right class= h-nav-resp">
+                <ul class="nav-list v-class-resp">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+           <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div> 
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Falit</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="bg1.png">
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script src="resp.js"></script>
+</body>
+</html>

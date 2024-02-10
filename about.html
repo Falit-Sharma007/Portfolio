@@ -1,0 +1,210 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(14, 13, 13);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+           /* height: 80px; */
+            background-color: rgb(26, 26, 34);
+            padding: 20px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(143, 143, 212);
+            font-size: 1.02rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .left img {
+            width: 10%;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 2rem;
+        }
+
+        section div {
+            font-size: 1.3em;
+        }
+
+       /* center hr {
+            margin-bottom: 50px;
+        } */
+
+        .firstSection{
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        .burger{
+            display: none; 
+            position: absolute;
+            cursor: pointer;
+            right: 5%;
+            top: 15px; 
+        }
+
+        .line{
+            width: 33px;
+            background-color: white;
+            height: 4px;
+            margin: 3px 3px;
+        } 
+
+
+        /* For animation */
+
+        section div {
+            animation: 2s anim-lineUp ease-out;
+        }
+
+        .lavender {
+            font-size: 1.8em;
+            color: red;
+        }
+
+        .orange {
+            font-size: 1.3em;
+        }
+        
+        @keyframes anim-lineUp {
+            0% {
+                opacity: 0;
+                transform: translateY(80%);
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+
+        @media only screen and (max-width: 800px) {
+            nav {
+                flex-direction: column;
+                padding: 2% 0;
+            }
+
+           /* .left {
+                text-align: center; 
+            } */
+
+            nav ul {
+                margin: 2% 0;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .right{
+                text-align: center;
+                margin-top: 10px;
+                transition: all 0.7s ease-out;
+                height: 447px;
+            } 
+            .right ul li{
+                padding: 30px;
+            }
+            .burger{
+                display: block;
+            }
+
+            .h-nav-resp{
+                height: 50px;
+            }
+            .v-class-resp{
+                opacity: 0;
+            }
+
+            center hr {
+                width: 35%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Falit's Portfolio.<img src="pi.jpg"></div>
+            <div class="right class= h-nav-resp">
+                <ul class="nav-list v-class-resp">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div> 
+        </nav>
+    </header>
+
+    <main>
+        <h1 align="center">About Me</h1>
+        <center>
+            <hr width="15%">
+        </center>
+        <section class="firstSection">
+            <div align="center"><span class="lavender">Hello! </span><span class="orange">I am Falit.</span> </div>
+            <div align="center">I am a passionate web developer who likes to create different stuff</div>
+            <div align="center">in the web. Currently i am a university student pursuing Bachelors</div>
+            <div align="center">in Information Technology at HPU. You can also see some </div>
+            <div align="center">of my works in the projects section.</div>
+        </section>
+    </main>
+    <script src="resp.js"></script>
+</body>
+
+</html>

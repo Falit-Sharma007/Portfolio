@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="stars.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,9 +16,10 @@
         }
 
         body {
-            background-color: rgb(14, 13, 13);
+            background-color: black;
             color: white;
             font-family: 'Poppins', sans-serif;
+            overflow-y: hidden;
         }
 
         nav {
@@ -25,7 +27,6 @@
             justify-content: space-around;
             align-items: center;
            /* height: 80px; */
-            background-color: rgb(26, 26, 34);
             padding: 20px 0;
         }
 
@@ -42,11 +43,29 @@
         nav ul li a {
             text-decoration: none;
             color: white;
+            position: relative;
+            padding: 0 2px;
         }
+
+        nav ul li a:after{
+            content: "";
+            position: absolute;
+            background-color: rgb(143, 143, 212);
+            height: 3px;
+            width: 0;
+            left: 0;
+            top: 22px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+             /* color: rgb(143, 143, 212)
+             font-size: 1.02rem; */
+        } 
 
         nav ul li a:hover {
             color: rgb(143, 143, 212);
-            font-size: 1.02rem;
         }
 
         .left {
@@ -155,6 +174,9 @@
         }
 
         @media only screen and (max-width: 800px) {
+            body {
+                overflow-y: scroll;
+            }
             nav {
                 flex-direction: column;
                 padding: 2% 0;
@@ -190,12 +212,19 @@
             }
             .v-class-resp{
                 opacity: 0;
+                display: none;
             }
         }
     </style>
 </head>
 
 <body>
+    <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+    </div>
     <header>
         <nav>
             <div class="left">Falit's Portfolio.<img src="pi.jpg"></div>
